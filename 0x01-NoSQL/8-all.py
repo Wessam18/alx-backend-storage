@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
-"""doc"""
+"""List all documentation"""
+
+from pymongo import MongoClient
 
 
 def list_all(mongo_collection):
-    """func doc"""
-    return list(mongo_collection.find())
+    """
+        function list all documentation
+    """
+    documents = mongo_collection.find()
+    return list(documents)
+
+
+if __name__ == "__main__":
+    list_all(mongo_collection)
